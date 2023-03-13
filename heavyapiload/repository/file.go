@@ -21,8 +21,10 @@ func (r *HeavyApiLoadRepository) Test() (string, error) {
 	defer f.Close()
 
 	log.SetOutput(f)
+
 	log.Println("Началась обработка запроса !!!")
 	time.Sleep(60 * time.Second)
 	log.Println("Закончилась обработка запроса !!!")
+
 	return "Запрос окончен", nil
 }
